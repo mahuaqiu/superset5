@@ -1,0 +1,8 @@
+docker-compose -f docker-compose-non-dev.yml up -d
+
+. /app/.venv/bin/activate
+/app/.venv/bin/python -m ensurepip --upgrade
+/app/.venv/bin/python -m pip install appdirs
+/app/.venv/bin/python -m pip install "shillelagh[genericjsonapi]>=1.2.18, <2"
+
+find / -name config.py
