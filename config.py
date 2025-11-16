@@ -259,7 +259,7 @@ SQLGLOT_DIALECTS_EXTENSIONS: DialectExtensions | Callable[[], DialectExtensions]
 QUERY_SEARCH_LIMIT = 1000
 
 # Flask-WTF flag for CSRF
-WTF_CSRF_ENABLED = True
+WTF_CSRF_ENABLED = False
 
 # Add endpoints that need to be exempt from CSRF protection
 WTF_CSRF_EXEMPT_LIST = [
@@ -365,7 +365,7 @@ AUTH_TYPE = AUTH_DB
 # Grant public role the same set of permissions as for a selected builtin role.
 # This is useful if one wants to enable anonymous users to view
 # dashboards. Explicit grant on specific datasets is still required.
-PUBLIC_ROLE_LIKE: str | None = None
+PUBLIC_ROLE_LIKE = "Gamma"
 
 # ---------------------------------------------------
 # Babel config for translations
@@ -1589,7 +1589,7 @@ DATABASE_OAUTH2_TIMEOUT = timedelta(seconds=30)
 CONTENT_SECURITY_POLICY_WARNING = True
 
 # Do you want Talisman enabled?
-TALISMAN_ENABLED = utils.cast_to_boolean(os.environ.get("TALISMAN_ENABLED", True))
+TALISMAN_ENABLED = False
 
 # If you want Talisman, how do you want it configured??
 # For more information on setting up Talisman, please refer to
